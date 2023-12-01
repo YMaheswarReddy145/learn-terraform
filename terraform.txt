@@ -1,0 +1,27 @@
+The content of terraform is available in session 36
+
+Install Terraform?
+   1. Go to the website terraform.io
+   2. select the option download terraform
+   3. select the operating system you are using if you sing linux then select the application you are using
+       now we are using Centos/RHEL
+   4. follow the approach nd install terraform.
+
+What is a terraform?
+  HashiCorp Terraform is an infrastructure as code (IaC) software tool that allows DevOps teams to automate infrastructure
+  provisioning using reusable, shareable, human-readable configuration files. The tool can automate infrastructure
+  provisioning in both on-premises and cloud environments.
+
+Why IAC?
+  1. Time to production is faster
+  2. Less Configuration Drift
+  3. Reduces Cost
+       Its not about the infra cost
+
+Alternatives to Terraform
+  1. Pulumi
+  2. Crossplane
+  3. Ansible
+
+
+  completed to 22 minutes in the video
