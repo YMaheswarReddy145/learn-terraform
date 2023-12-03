@@ -1,6 +1,7 @@
-The content of terraform is available in session 36
+The content of terraform is available in session 36 (URL: https://youtu.be/eDrqpJ-oMyk?list=PLLmNg_q93mewHYKnfY1ECkYRtF1ISe_Za)
 
 Install Terraform?
+------------------------------------------------------------
    1. Go to the website terraform.io
    2. select the option download terraform
    3. select the operating system you are using if you sing linux then select the application you are using
@@ -8,20 +9,83 @@ Install Terraform?
    4. follow the approach nd install terraform.
 
 What is a terraform?
+------------------------------------------------------------
   HashiCorp Terraform is an infrastructure as code (IaC) software tool that allows DevOps teams to automate infrastructure
   provisioning using reusable, shareable, human-readable configuration files. The tool can automate infrastructure
   provisioning in both on-premises and cloud environments.
 
 Why IAC?
+------------------------------------------------------------
   1. Time to production is faster
   2. Less Configuration Drift
   3. Reduces Cost
        Its not about the infra cost
 
 Alternatives to Terraform
+------------------------------------------------------------
   1. Pulumi
   2. Crossplane
   3. Ansible
 
+HCL - HarshiCorp Configuration Language is a terraform language
+----------------------------------------------------------------
 
-  completed to 22 minutes in the video
+Terraform is introduced some other languages other then HCL
+
+How HCL code will Look like is
+------------------------------------------------------------
+resource "abc" "xyz"
+{
+   x = 10
+   y = 10
+}
+
+ --> Code is in blocks {}
+ --> Here we are seeing resource block, More such blocks re offered by terraform
+       resource, variable, output, data, local, module, provider blocks are the blocks offered by terraform.
+ --> resources are under provider, &provider documentation.
+ --> Here abc is a resource name which is offered by provider. it is must and should be same as offered by vendor.
+ --> xyz is a local resource name we are giving to our resource
+ --> x, y are called as arguments
+ --> 10, 20 are inputs
+ --> resources offers data after creation called as attribute.
+
+
+Terraform Files:
+------------------------------
+ --> All Terraform files should end with .tf
+ --> Terraform will load all the files in that location ending .tf, Meaning we can always make multiple files as per
+      our requirement or organization.
+
+Terraform Command:
+------------------------------
+The terraform is actually have some life cycle and the well known life cycle we use is:
+------------------        ------------------        -------------------        ---------------------
+|     INIT       |        |     PLAN       |        |   APPLY         |        |    DESTROY        |
+| terraform init | -----> | terraform plan | -----> | terraform apply | -----> | terraform destroy |
+------------------        ------------------        -------------------        ---------------------
+
+Init    : Terraform Init will understand the code we hve written and download necessary provider plugins to run
+           the code. it will also look for the syntax either it's good or bad and also check syntax errors. if
+           everything is good then it going to download the appropriate plugins.
+
+plan    : Terraform Plan will tell the execution plan that what it is planning to do when you actually apply.
+          Example: if you ask for 3 servers it will create the 3 servers, if encase already 2 servers are created then
+                   it will tell there are already 2 servers present so it is going to create 3rd server. so it will
+                   show you the plan what it is trying to do.
+
+Apply   : Terraform apply create the resource which are mentioned in the code. if the resource is already there then
+           TF will not do anything
+
+Destroy : Terraform Destroy is an optional options it not mandatory all the times.
+          It will delete the resources which were been created so far by TF. However TF will not look for code to delete,
+           it will delete created resource by TF.
+
+
+
+
+
+
+
+1. RESOURCES
+2. VARIABLES
