@@ -29,6 +29,7 @@ output "fruits_apple_quantity" {
 output "fruits_apple_quantity_name" {
   value = "fruit apple is having only ${var.fruits_with_quantity["apple"]} quantity "
 }
+
 output "fruits_orange_quantity" {
   value = "fruit orange is having the quantity of ${var.fruits_with_quantity["orange"]} "
 }
