@@ -33,3 +33,9 @@ output "fruits_apple_quantity_name" {
 output "fruits_orange_quantity" {
   value = "fruit orange is having the quantity of ${var.fruits_with_quantity["orange"]} "
 }
+
+# here we re not providing the input we are giving the input in the file an taking the output
+variable "test1" {}
+output "test1" {
+  value = var.test1
+}
