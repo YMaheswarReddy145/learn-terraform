@@ -1,4 +1,6 @@
-The content of terraform is available in session 36 (URL: https://youtu.be/eDrqpJ-oMyk?list=PLLmNg_q93mewHYKnfY1ECkYRtF1ISe_Za)
+The content of terraform is available in
+    session 36 (URL: https://youtu.be/eDrqpJ-oMyk?list=PLLmNg_q93mewHYKnfY1ECkYRtF1ISe_Za )
+    session 37 (URL: https://youtu.be/FP0U01YNyQU?list=PLLmNg_q93mewHYKnfY1ECkYRtF1ISe_Za )
 
 Install Terraform?
 ------------------------------------------------------------
@@ -89,3 +91,4 @@ Destroy : Terraform Destroy is an optional options it not mandatory all the time
 
 1. RESOURCES
 2. VARIABLES
+3. Creating route53 records
