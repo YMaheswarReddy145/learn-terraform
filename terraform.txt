@@ -97,6 +97,18 @@ we can create a empty variable, here test1 does not have any variable here, so t
 the var files(terraform.tfvars) file, this is the file which is split by terraform automatically to declare the variables.
 
 variable "test1" {}
+output "test1" {
+  value = var.test1
+}
+Here test1 is the file where we have provided the input.
+to run it just given terraform init --> terraform apply -auto-approval
+
+But suppose we hve declare a variable for env and we have provided the dev and prod env in 2 different files with  file
+name as dev.tfvars & prod.tfvars now if we perform the same approach we have given to test1 file it will ask to enter the
+value of env.  if we don't need to enter the we can directly declare in this way
+    terraform init --> terraform apply -auto-approval -var-file dev.tfvars
+in output we can see the env as dev if we want the prod env then we can provide prod.tfvars in palce of dev.tfvars.
+
 
 
 
