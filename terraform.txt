@@ -106,12 +106,18 @@ to run it just given terraform init --> terraform apply -auto-approval
 But suppose we hve declare a variable for env and we have provided the dev and prod env in 2 different files with  file
 name as dev.tfvars & prod.tfvars now if we perform the same approach we have given to test1 file it will ask to enter the
 value of env.  if we don't need to enter the we can directly declare in this way
-    terraform init --> terraform apply -auto-approval -var-file dev.tfvars
+    terraform init --> terraform apply -auto-approval -var-file dev.tfvars  (or)
+    terraform init --> terraform apply -auto-approval -var-file=dev.tfvars
 in output we can see the env as dev if we want the prod env then we can provide prod.tfvars in palce of dev.tfvars.
 
 
 
 
+We have used the variable topic for our expense project which is present in expense-v2
+For this we have declared all the common variables in one file and provided these variables info in the input file, to
+keep our code some how dry so if you ent to change anything so directly we can change in the input file.
+     terraform init --> terraform apply -auto-approval -var-file=dev.tfvars
+After submitting the above it will create 3 instance nd 3 dnf records
 
 1. RESOURCES
 2. VARIABLES
