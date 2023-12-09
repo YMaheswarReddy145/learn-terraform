@@ -1,6 +1,7 @@
 The content of terraform is available in
     session 36 (URL: https://youtu.be/eDrqpJ-oMyk?list=PLLmNg_q93mewHYKnfY1ECkYRtF1ISe_Za )
     session 37 (URL: https://youtu.be/FP0U01YNyQU?list=PLLmNg_q93mewHYKnfY1ECkYRtF1ISe_Za )
+    session 38 (URL:
 
 Install Terraform?
 ------------------------------------------------------------
@@ -119,7 +120,7 @@ keep our code some how dry so if you ent to change anything so directly we can c
      terraform init --> terraform apply -auto-approval -var-file=dev.tfvars
 After submitting the above it will create 3 instance nd 3 dnf records
 
-Modules in Terraform:
+Modules in Terraform: (A group of resources which we created is called a module)
 ---------------------------
 In Terraform, modules are a way to organize and reuse the code to define the infrastructure components.
 Example: If i want to use a grouping by the wy i have to crete 2 resources and if i want to call the 2 resources at once
