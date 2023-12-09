@@ -122,3 +122,8 @@ After submitting the above it will create 3 instance nd 3 dnf records
 1. RESOURCES
 2. VARIABLES
 3. Creating route53 records
+
+
+expense-v1 ---> creating instances and route53 with out dry code
+expense-v2 ---> using variables topic to keep the code as dry
+expense-v3 ---> Using loops topic
