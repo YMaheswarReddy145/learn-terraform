@@ -39,3 +39,11 @@ variable "test1" {}
 output "test1" {
   value = var.test1
 }
+
+# here we are declaring the variable as environment in different files
+variable "env" {}
+output "env" {
+  value= var.env
+}
+
+
