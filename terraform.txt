@@ -84,7 +84,19 @@ Destroy : Terraform Destroy is an optional options it not mandatory all the time
            it will delete created resource by TF.
 
 
+The other way of declaring the variables is rather then declaring the input like this.
+variable "fruits_with_quantity" {
+  default = {
+    apple = 100
+    banana = 200
+    orange = 300
+  }
+}
 
+we can create a empty variable, here test1 does not have any variable here, so then we can pass the variable by creating
+the var files(terraform.tfvars) file, this is the file which is split by terraform automatically to declare the variables.
+
+variable "test1" {}
 
 
 
