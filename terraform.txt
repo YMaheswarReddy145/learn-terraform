@@ -119,11 +119,16 @@ keep our code some how dry so if you ent to change anything so directly we can c
      terraform init --> terraform apply -auto-approval -var-file=dev.tfvars
 After submitting the above it will create 3 instance nd 3 dnf records
 
-1. RESOURCES
-2. VARIABLES
-3. Creating route53 records
+Modules in Terraform:
+---------------------------
+In Terraform, modules are a way to organize and reuse the code to define the infrastructure components.
+Example: If i want to use a grouping by the wy i have to crete 2 resources and if i want to call the 2 resources at once
+         then we use module
+
+Here test folder is a module
 
 
 expense-v1 ---> creating instances and route53 with out dry code
 expense-v2 ---> using variables topic to keep the code as dry
 expense-v3 ---> Using loops topic
+expense-v4 ---> Using Modules
