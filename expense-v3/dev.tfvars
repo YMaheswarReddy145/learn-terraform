@@ -1,7 +1,7 @@
 env     = "dev"
 ami     = "ami-03265a0778a880afb"
-sg_id   = ["sg-033d8567b50d2e180"]
-zone_id = "Z0021413JFIQEJP9ZO9Z"
+sg_id   = ["sg-0b61db386cd56f275"]
+zone_id = "Z07166851NBO3WMMCWC4B"
 
 components = {
   frontend = {
