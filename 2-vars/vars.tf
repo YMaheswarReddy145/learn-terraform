@@ -40,7 +40,7 @@ output "test1" {
   value = var.test1
 }
 
-# here we are declaring the variable as environment in different files
+# here we are declaring the variable as environment and we are providing the env details in 2 different files
 variable "env" {}
 output "env" {
   value= var.env
