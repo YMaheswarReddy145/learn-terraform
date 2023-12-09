@@ -128,6 +128,33 @@ Example: If i want to use a grouping by the wy i have to crete 2 resources and i
 
 Here test folder is a module
 
+Remote State In Terraform:
+------------------------------------
+By default, Terraform stores state locally in a file named terraform.tfstate. When working with Terraform in a team,
+After executing the terraform apply we can able to see a file with terraform.tfstate by default.
+But now i want to store it in s3 bucket. aprt form s3 we cn also store it in multiple places (ref: https://developer.hashicorp.com/terraform/language/settings/backends/s3)
+Now to store it in s3 bucket we have given the below code
+
+terraform {
+  backend "s3" {
+    bucket = "mahi-terraform-remote-state"
+    key    = "test/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
+resource "null_resource" "test" {}    ---> it is just to run the null resource
+
+Now give terraform init --> terraform apply -auto-approve once it executed successfully if we give ls we can't see
+terraform.tfstate because we are upload it to s3 bucket so it present in s3 bucket.
+
+Now i want the people not to delete these files only the system need to delete so i can provide some policies.
+The AWS control Tower has the policies that apply for all the accounts, none of the people should crete a public id,
+in case even the administrator of the account also cannot create a local user(public ip). so keeping the file in s3
+bucket is safe because we not loose the data init.
+
+
+
 
 expense-v1 ---> creating instances and route53 with out dry code
 expense-v2 ---> using variables topic to keep the code as dry
